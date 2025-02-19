@@ -75,3 +75,8 @@ button:hover {
   size:25px;
   color:rgb(140, 135, 175)
 }
+
+.modal
+{
+  display: none;
+}
