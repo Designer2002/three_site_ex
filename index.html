@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <link rel="icon" href="images/free-icon-font-heart-3916579.png">
+    
+    <!-- Link to the CSS file -->
+  </head>
+  <body>
+    
+    <h1>Главная страница</h1>
+    <div id="three-container"></div>
+    <div class="main-container">
+      
+      <!-- <nav>
+        <a id="addS">Добавить Студента</a>
+        <a id="addP">Добавить Преподавателя</a>
+        <a id="addC">Добавить Курс</a>
+        <div class="animation start-home"></div>
+      </nav> -->
+      <div class="content-section">
+        <div class="content-wrapper">
+          <div class="text-content">
+            <h2 class="s">Студенты</h2>
+            <ul>
+              <li>Иван Иванов</li>
+              <li>Петр Петров</li>
+              <li>Мария Сидорова</li>
+              <li>Анна Козлова</li>
+            </ul>
+          </div>
+          <div class="image-card">
+            <img src="images/student.jpeg" alt="Students" class="section-image">
+          </div>
+        </div>
+
+        <div class="content-wrapper">
+          <div class="text-content">
+            <h2 class="p">Преподаватели</h2>
+            <ul>
+              <li>Александр Александрович</li>
+              <li>Елена Викторовна</li>
+              <li>Сергей Павлович</li>
+            </ul>
+          </div>
+          <div class="image-card">
+            <img src="images/teacher.webp" alt="Teachers" class="section-image">
+          </div>
+        </div>
+
+        <div class="content-wrapper">
+          <div class="text-content">
+            <h2 class="k">Курсы</h2>
+            <ul>
+              <li>Математика - Преподаватель: Александр Александрович</li>
+              <li>Физика - Преподаватель: Елена Викторовна</li>
+              <li>Информатика - Преподаватель: Сергей Павлович</li>
+            </ul>
+          </div>
+          <div class="image-card">
+            <img src="images/classes.jpg" alt="Courses" class="section-image">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <dialog id="modalP" aria-modal="true" aria-labelledby="modalP-title">
+      <div class="modal-content">
+        <div class="hh"  id="modalP-title">Добавить преподавателя</div>
+        <form method="post" action="/add-teacher">
+          <label for="name">Имя преподавателя:</label>
+          <input type="text" id="name" name="name" required>
+          <button type="submit">Добавить</button>
+        </form>
+        <button type="button" id="backP" aria-label="Закрыть">Назад</button>
+      </div>
+    </dialog>
+
+    <dialog id="modalS" aria-modal="true" aria-labelledby="modalS-title">
+      <div class="modal-content">
+        <div class="hh" id="modalS-title">Добавить студента</div>
+        <form method="post" action="/add-student">
+          <label for="name">Имя студента:</label>
+          <input type="text" id="name" name="name" required>
+          <button type="submit">Добавить</button>
+        </form>
+        <button type="button" id="backS" aria-label="Закрыть">Назад</button>
+      </div>
+    </dialog>
+
+    <dialog id="modalC" aria-modal="true" aria-labelledby="modalC-title">
+      <div class="modal-content">
+        <div class="hh" id="modalC-title">Добавить курс</div>
+        <form method="post" action="/add-course">
+          <label for="name">Название курса:</label>
+          <input type="text" id="name" name="name" required>
+          <button type="submit">Добавить</button>
+        </form>
+        <button type="button" id="backC" aria-label="Закрыть">Назад</button>
+      </div>
+    </dialog>
+  </body>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "/node_modules/three/build/three.module.js",
+        "three/addons/": "/node_modules/three/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="modules/ring.js"></script>
+</html>
+
